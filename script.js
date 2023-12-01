@@ -1,36 +1,18 @@
-document.querySelectorAll(".carousel").forEach((carousel) => {
-  const items = carousel.querySelectorAll(".carousel__item");
-  const buttonsHtml = Array.from(items, () => {
-    return `<span class="carousel__button"></span>`;
-  });
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-  carousel.insertAdjacentHTML(
-    "beforeend",
-    `
-		<div class="carousel__nav">
-			${buttonsHtml.join("")}
-		</div>
-	`
-  );
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
 
-  const buttons = carousel.querySelectorAll(".carousel__button");
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
 
-  buttons.forEach((button, i) => {
-    button.addEventListener("click", () => {
-      // un-select all the items
-      items.forEach((item) =>
-        item.classList.remove("carousel__item--selected")
-      );
-      buttons.forEach((button) =>
-        button.classList.remove("carousel__button--selected")
-      );
-
-      items[i].classList.add("carousel__item--selected");
-      button.classList.add("carousel__button--selected");
-    });
-  });
-
-  // Select the first item on page load
-  items[0].classList.add("carousel__item--selected");
-  buttons[0].classList.add("carousel__button--selected");
-});
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
