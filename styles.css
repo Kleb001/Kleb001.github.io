@@ -9,7 +9,7 @@ body {
 .carousel {
   width: 50%;
   height: 30%;
-  position: center;
+  position: relative;
 }
 
 .carousel > ul {
