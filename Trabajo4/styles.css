@@ -3,19 +3,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f5f5f5; /* Light gray background */
-  color: #333; /* Dark gray text color */
+  background: url('background-photo.jpg') center/cover no-repeat; /* Add your background photo */
+  color: #ffffff; /* White text color */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px; /* Add padding to the container for a cleaner look */
 }
 
 header {
   background-color: #3498db; /* Main blue color for the header */
   color: white;
-  padding: 1em 0;
+  padding: 1em;
+  border-radius: 10px; /* Add border-radius for rounded corners */
 }
 
 nav ul {
@@ -42,7 +44,6 @@ nav a:hover {
 }
 
 .hero {
-  background: url('hero-background.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 4em 0;
@@ -126,17 +127,16 @@ nav a:hover {
   color: white;
   text-align: center;
   padding: 4em 0;
+  border-radius: 10px; /* Add border-radius for rounded corners */
 }
 
 .about h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
-  color: #ffffff; /* White text color for the heading */
 }
 
 .about p {
   font-size: 1.2em;
-  color: #ecf0f1; /* Slightly off-white text color */
 }
 
 .contact {
@@ -144,6 +144,7 @@ nav a:hover {
   color: white;
   text-align: center;
   padding: 4em 0;
+  border-radius: 10px; /* Add border-radius for rounded corners */
 }
 
 .contact h2 {
@@ -165,7 +166,6 @@ label {
   display: block;
   margin-bottom: 0.5em;
   font-weight: bold;
-  color: #ffffff; /* White text color for labels */
 }
 
 input,
@@ -190,26 +190,4 @@ button {
 }
 
 button:hover {
-  background-color: #229954; /* Darker green on hover */
-}
-
-footer {
-  background-color: #34495e; /* Dark blue-gray color for the footer */
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-/* Additional styling for links inside the footer */
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-footer a:hover {
-  color: #ecf0f1; /* Slightly off-white on hover */
-}
+  background-color: #229954;
