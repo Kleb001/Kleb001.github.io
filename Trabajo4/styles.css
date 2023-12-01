@@ -4,7 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: url('background-photo.jpg') center/cover no-repeat;
-  color: #ffffff;
+  color: #808080;
 }
 
 .container {
