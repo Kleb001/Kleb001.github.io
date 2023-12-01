@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #ecf0f5; /* Light blue-gray background */
+  background-color: #f5f5f5; /* Light gray background */
+  color: #333; /* Dark gray text color */
 }
 
 .container {
@@ -12,26 +13,9 @@ body {
 }
 
 header {
-  background-color: #3498db; /* Main blue color */
+  background-color: #3498db; /* Main blue color for the header */
   color: white;
   padding: 1em 0;
- 
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/768px-JavaScript-logo.png') center/cover no-repeat;
-  color: white;
-  padding: 1em 0;
-  text-align: center;
-  position: relative;
-}
-
-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Overlay color and transparency */
-  z-index: -1;
 }
 
 nav ul {
@@ -56,6 +40,7 @@ nav a {
 nav a:hover {
   color: #2980b9; /* Darker blue on hover */
 }
+
 
 .hero {
   background: url('hero-background.jpg') center/cover no-repeat;
@@ -192,7 +177,7 @@ button:hover {
 }
 
 .about {
-  background-color: #e74c3c; /* Red color for the about section */
+  background-color: #3498db; /* Blue color for the about section */
   color: white;
   text-align: center;
   padding: 4em 0;
@@ -201,8 +186,31 @@ button:hover {
 .about h2 {
   font-size: 2.5em;
   margin-bottom: 0.5em;
+  color: #ffffff; /* White text color for the heading */
 }
 
 .about p {
   font-size: 1.2em;
+  color: #ecf0f1; /* Slightly off-white text color */
+}
+
+footer {
+  background-color: #34495e; /* Dark blue-gray color for the footer */
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Additional styling for links inside the footer */
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #ecf0f1; /* Slightly off-white on hover */
 }
