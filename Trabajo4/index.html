@@ -11,12 +11,12 @@
   <header>
     <div class="container">
       <h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/48px-JavaScript-logo.png" alt="JavaScript Logo" class="logo">
-      Cool Website
-    </h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/48px-JavaScript-logo.png" alt="JavaScript Logo" class="logo">
+        Cool Website
+      </h1>
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -26,36 +26,36 @@
 
   <section class="hero">
     <div class="container">
-      <h2>Welcome to our Cool Website</h2>
-      <p>Explore the awesomeness!</p>
+      <h2>Welcome to Cool Website</h2>
+      <p>Experience the coolest website on the internet. Discover amazing features and services.</p>
     </div>
   </section>
 
   <section class="cards">
     <div class="container">
-      <div class="card" onclick="showDetails('Card 1')">
+      <div class="card">
+        <img src="https://www.simform.com/wp-content/uploads/2019/10/Node.JS-Use-Cases.png" alt="Card 1 Image">
         <h3>Card 1</h3>
-        <p>Click me to reveal details!</p>
+        <p>Description of Card 1.</p>
       </div>
-      <div class="card" onclick="showDetails('Card 2')">
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" alt="Card 2 Image">
         <h3>Card 2</h3>
-        <p>Click me to reveal details!</p>
+        <p>Description of Card 2.</p>
       </div>
-      <div class="card" onclick="showDetails('Card 3')">
+
+      <div class="card">
+        <img src="https://bairesdev.mo.cloudinary.net/blog/2023/08/What-Is-JavaScript-Used-For.jpg?tx=w_3840,q_auto" alt="Card 3 Image">
         <h3>Card 3</h3>
-        <p>Click me to reveal details!</p>
+        <p>Description of Card 3.</p>
       </div>
     </div>
   </section>
 
-  <div class="details-modal" id="detailsModal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeDetailsModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <p id="modalContent"></p>
-    </div>
-  </div>
+  <footer>
+    <p>&copy; 2023 Cool Website</p>
+  </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
