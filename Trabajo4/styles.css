@@ -226,3 +226,8 @@ footer a {
 footer a:hover {
   color: #ecf0f1;
 }
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Add border-radius for rounded corners */
+}
