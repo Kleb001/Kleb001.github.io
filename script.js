@@ -1,28 +1,36 @@
-let currentIndex = 0;
+document.querySelectorAll(".carousel").forEach((carousel) => {
+  const items = carousel.querySelectorAll(".carousel__item");
+  const buttonsHtml = Array.from(items, () => {
+    return `<span class="carousel__button"></span>`;
+  });
 
-function showSlide(index) {
-  const slides = document.querySelector('.carousel-slide');
-  const totalSlides = document.querySelectorAll('.carousel-slide img').length;
-  
-  if (index >= totalSlides) {
-    currentIndex = 0;
-  } else if (index < 0) {
-    currentIndex = totalSlides - 1;
-  } else {
-    currentIndex = index;
-  }
+  carousel.insertAdjacentHTML(
+    "beforeend",
+    `
+		<div class="carousel__nav">
+			${buttonsHtml.join("")}
+		</div>
+	`
+  );
 
-  const translateValue = -100 * currentIndex + '%';
-  slides.style.transform = `translateX(${translateValue})`;
-}
+  const buttons = carousel.querySelectorAll(".carousel__button");
 
-function nextSlide() {
-  showSlide(currentIndex + 1);
-}
+  buttons.forEach((button, i) => {
+    button.addEventListener("click", () => {
+      // un-select all the items
+      items.forEach((item) =>
+        item.classList.remove("carousel__item--selected")
+      );
+      buttons.forEach((button) =>
+        button.classList.remove("carousel__button--selected")
+      );
 
-function prevSlide() {
-  showSlide(currentIndex - 1);
-}
+      items[i].classList.add("carousel__item--selected");
+      button.classList.add("carousel__button--selected");
+    });
+  });
 
-// Automatically advance to the next slide every 3 seconds (adjust as needed)
-setInterval(nextSlide, 3000);
+  // Select the first item on page load
+  items[0].classList.add("carousel__item--selected");
+  buttons[0].classList.add("carousel__button--selected");
+});
