@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f8f8f8;
+  background-color: #ecf0f5; /* Light blue-gray background */
 }
 
 .container {
@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #3498db; /* Main blue color */
   color: white;
   padding: 1em 0;
 }
@@ -37,7 +37,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffd700; /* Change to your preferred hover color */
+  color: #2980b9; /* Darker blue on hover */
 }
 
 .hero {
@@ -76,7 +76,7 @@ nav a:hover {
 
 .card:hover {
   transform: scale(1.05);
-  background-color: #ffd700; /* Change to your preferred hover background color */
+  background-color: #3498db; /* Darker blue on hover */
 }
 
 .details-modal {
@@ -119,3 +119,4 @@ nav a:hover {
     flex: 0 1 calc(100% - 20px);
   }
 }
+
